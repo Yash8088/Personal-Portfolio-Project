@@ -1,0 +1,2 @@
+# 💫 About My Project:
+I developed a dynamic personal portfolio website to showcase my projects, utilizing HTML, CSS, and JavaScript to build a robust and visually appealing platform. The site features unique animations that I coded using GSAP, enhancing user experience and providing a smooth, interactive experience. I ensured that the website is fully responsive, offering optimal functionality across all devices and screen sizes. This project highlights my technical skills along with my creative abilities, and serves as a comprehensive display of my projects
