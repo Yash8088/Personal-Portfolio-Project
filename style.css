@@ -176,6 +176,9 @@ body {
 
 .row .parent .child span {
   font-family: font1;
+  font-style: italic;
+
+  padding-right: 1vh;
   color: lightseagreen;
 }
 
@@ -249,22 +252,24 @@ polyline {
   height: 45vw;
   border-radius: 3vw;
   z-index: 1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1);
+  filter: grayscale();
 }
 
-#imgrig.imgcntnr:hover {
-  filter: grayscale();
+#imgrig .imgcntnr:hover {
+  filter: grayscale(0);
 }
 
 #imgrig .imgcntnr:nth-child(1) {
   transform: translate(-30%, -8%) rotate(-20deg);
-  /* background-image: url(https://abhishekjha.me/card1.a0552dbc.png);*/
+  background-image: url(fortran3.png);
   background-size: cover;
   background-position: center;
   background-color: red;
 }
 #imgrig .imgcntnr:nth-child(2) {
   transform: translate(6%, -1%) rotate(-15deg);
-  /*background-image: url(https://abhishekjha.me/card2.cfc820ab.png);*/
+  background-image: url(fortran2.png);
   background-size: cover;
   background-position: center;
   background-color: yellow;
@@ -272,7 +277,7 @@ polyline {
 
 #imgrig .imgcntnr:nth-child(3) {
   transform: translate(30%, 10%) rotate(-10deg);
-  /*background-image: url(https://abhishekjha.me/card3.b705d81b.png);*/
+  background-image: url(fortran1.png);
   background-size: cover;
   background-position: center;
   background-color: blue;
@@ -314,6 +319,7 @@ polyline {
   font-size: 8vh;
   padding-top: 10vh;
   margin-left: 30vh;
+  transform: translate(-10vh, 0);
   border-bottom: 0.3vh solid #3b3835;
   margin-bottom: 10vh;
   color: #3b3835;
@@ -325,7 +331,9 @@ polyline {
   font-size: 5vh;
   line-height: 18vh;
   margin-left: 0vh;
+
   padding-left: 0vh;
+  width: 70%;
   color: #3b3835;
   opacity: 0.8;
 }
@@ -340,14 +348,27 @@ polyline {
 #icons {
   display: flex;
   flex-direction: column;
-  padding-left: 30vh;
+
   gap: 10vh;
+
+  position: relative;
+  justify-content: space-between;
+  padding: 0 0vw;
+  width: 100;
 }
 .icon-cnt {
   align-items: center;
+  justify-content: center;
+
+  width: 55%;
+  padding-right: vw;
+}
+.icon-cnt img {
+  width: 1vh;
 }
 .icon-cnt h3 {
   font-family: font2;
+  font-size: 2vh;
   font-weight: 10;
   color: lightseagreen;
   opacity: 0.6;
@@ -356,29 +377,33 @@ polyline {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: red; */
   border-radius: 5vh;
   width: 100vh;
+  transform: translate(10vh, 0);
+  /* background-color: yellow; */
 }
 .back {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* background-color: blue; */
+
   border-radius: 5vh;
   width: 100vh;
-  margin-left: 60vh;
+
+  padding: 0 5vw;
+  margin: auto;
+  box-sizing: border-box;
+  transform: translate(25vh, 0);
+  /* background-color: red; */
 }
 .frame {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 5vh;
-  margin-right: 60vh;
+  transform: translate(25vh, 0);
   /* background-color: green; */
   width: 100vh;
-
-  margin-left: 23vh;
 }
 
 .front img {
@@ -405,14 +430,14 @@ polyline {
   padding-top: 15vh;
   font-size: 8vw;
 
-  margin-right: 45vh;
-
   font-family: font3;
   font-weight: 200;
   color: #3b3835;
 }
 
 .maz {
+  font-style: italic;
+
   color: lightseagreen;
 }
 
@@ -439,12 +464,13 @@ polyline {
   justify-content: space-between;
   margin-top: 6vw;
   position: relative;
-  width: 100;
+  width: 100%;
   padding: 0 5vw;
 }
 
 .cnt {
-  width: 55%;
+  width: 65%;
+  cursor: pointer;
   overflow: hidden;
   border-radius: 50px; /* rounded corners*/
 }
@@ -526,19 +552,27 @@ polyline {
   position: absolute;
   bottom: 0;
   right: 0;
-  transform: translate(-25vw, -5vw);
+  transform: translate(-20vw, -5vw);
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .aboutmedesc h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: yellow; */
   position: relative;
 
-  right: -15vw;
-
-  font-size: 2vw;
+  right: -12vw;
+  top: -1vw;
+  font-size: 4.5vh;
   font-weight: 600;
-  padding: 0 5vw;
 
+  /* padding: 0 5vw; */
+  padding-left: 10vw;
   font-family: "font1";
   color: #3b3835;
 }
@@ -662,7 +696,7 @@ polyline {
 
   position: relative; /* in order to see it*/
   width: 100%;
-  min-height: 100vh;
+  min-height: 60vh;
   background-color: lightseagreen;
   align-items: center;
   justify-content: center;
@@ -747,7 +781,7 @@ polyline {
   width: 100%;
   height: auto;
   padding: 0 20vw;
-
+  padding-bottom: 3vh;
   overflow: hidden;
 }
 #footerrow a {

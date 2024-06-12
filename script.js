@@ -170,6 +170,7 @@ function cardHoverEffect() {
 
       document.querySelector("#work").style.backgroundColor =
         "#" + dets.target.dataset.color;
+      console.log("ABC");
     });
 
     cnt.addEventListener("mouseleave", function (dets) {
@@ -181,7 +182,16 @@ function cardHoverEffect() {
     });
   });
 }
-
+function onCardClick() {
+  document.querySelectorAll(".cnt").forEach(function (cnt) {
+    cnt.addEventListener("click", function () {
+      const url = cnt.getAttribute("data-url");
+      if (url) {
+        window.open(url, "_blank");
+      }
+    });
+  });
+}
 function scrollAppear() {
   gsap.registerPlugin(scrollTrigger);
   // Select all image containers
@@ -214,4 +224,5 @@ valueSetters();
 loaderAnimation();
 
 cardHoverEffect();
+onCardClick();
 //scrollAppear();
