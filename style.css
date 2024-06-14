@@ -19,7 +19,8 @@
   box-sizing: border-box;
 }
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 #main {
   width: 100%;
@@ -385,8 +386,6 @@ polyline {
 
   .row {
     margin: 0 -1vw;
-  }
-  .row svg {
   }
 
   .row h5 {

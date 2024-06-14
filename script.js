@@ -182,6 +182,8 @@ window.onload = function () {
   loaderAnimation();
 };
 
+locoInitialize();
+
 // Call the function to rotate images based on scroll position
 
 cardHoverEffect();
