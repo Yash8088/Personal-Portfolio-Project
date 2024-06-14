@@ -109,50 +109,6 @@ function locoInitialize() {
 }
 
 function cardHoverEffect() {
-  //   const cnt = document.querySelector("#work");
-  //   const cursorElem = document.querySelector("#cursor");
-  //   const images = cursorElem.querySelectorAll("#elem img");
-
-  //   let currentIndex = 0;
-  //   let slideshowInterval;
-
-  //   // Set initial active image
-  //   images[currentIndex].classList.add("active");
-
-  //   cnt.addEventListener("mousemove", function (dets) {
-  //     // Move cursor
-  //     const mouseX = dets.clientX;
-  //     const mouseY = dets.clientY;
-  //     cursorElem.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-
-  //     // Change background color based on data-color attribute of the image
-  //     if (dets.target.dataset.color) {
-  //       document.querySelector("#work").style.backgroundColor =
-  //         "#" + dets.target.dataset.color;
-  //     } else {
-  //       document.querySelector("#work").style.backgroundColor = ""; // Reset background color if no data-color attribute
-  //     }
-  //   });
-
-  //   cnt.addEventListener("mouseenter", function () {
-  //     cursorElem.style.display = "block"; // Show cursorElem on hover
-
-  //     slideshowInterval = setInterval(() => {
-  //       images[currentIndex].classList.remove("active");
-  //       currentIndex = (currentIndex + 1) % images.length;
-  //       images[currentIndex].classList.add("active");
-  //     }, 1000); // Change image every 1 second
-  //   });
-
-  //   cnt.addEventListener("mouseleave", function () {
-  //     cursorElem.style.display = "none"; // Hide cursorElem when not hovering
-
-  //     clearInterval(slideshowInterval);
-  //     images.forEach((image) => image.classList.remove("active")); // Remove active class from all images
-  //     currentIndex = 0;
-  //     document.querySelector("#work").style.backgroundColor = ""; // Reset background color on mouseleave
-  //   });
-
   document.querySelectorAll(".cnt").forEach(function (cnt) {
     var showingImage;
 
@@ -170,7 +126,6 @@ function cardHoverEffect() {
 
       document.querySelector("#work").style.backgroundColor =
         "#" + dets.target.dataset.color;
-      console.log("ABC");
     });
 
     cnt.addEventListener("mouseleave", function (dets) {
@@ -192,37 +147,42 @@ function onCardClick() {
     });
   });
 }
-function scrollAppear() {
-  gsap.registerPlugin(scrollTrigger);
-  // Select all image containers
-  const imageContainers = document.querySelectorAll(
-    ".front img, .back img, .frame img"
+
+//for smaller screens parallax
+function updateScrollSpeed() {
+  const images = document.querySelectorAll(
+    'img[data-index="0"], img[data-index="1"]'
   );
 
-  // Loop through each image container
-  imageContainers.forEach((container) => {
-    // Set up ScrollTrigger for each container
-    gsap.from(container, {
-      opacity: 0, // Start with opacity 0
-      y: 50, // Move 50px from top
-      duration: 1, // Animation duration
-      scrollTrigger: {
-        trigger: container, // Use the container itself as the trigger
-        start: "top 80%", // Start animation when the top of the container reaches 80% of the viewport
-        end: "bottom 20%", // End animation when the bottom of the container reaches 20% of the viewport
-        toggleActions: "play none none reverse", // Play animation when entering, reverse when leaving
-        markers: true, // Optional: Add markers for debugging
-      },
-    });
+  images.forEach((image) => {
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      // When screen width is 768px or less
+      image.setAttribute("data-scroll-speed", "-0.5");
+      console.log(image.getAttribute("data-scroll-speed"));
+    } else {
+      // When screen width is more than 768px
+      image.setAttribute("data-scroll-speed", "-1.5");
+    }
   });
+  console.log("ABC");
 }
 
 locoInitialize();
+
+// Initial check
+updateScrollSpeed();
+
+// Add event listener for window resize
+window.addEventListener("resize", updateScrollSpeed);
+
 revealToSpan();
 valueSetters();
 
-loaderAnimation();
+window.onload = function () {
+  loaderAnimation();
+};
+
+// Call the function to rotate images based on scroll position
 
 cardHoverEffect();
 onCardClick();
-//scrollAppear();
