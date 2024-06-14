@@ -158,13 +158,11 @@ function updateScrollSpeed() {
     if (window.matchMedia("(max-width: 768px)").matches) {
       // When screen width is 768px or less
       image.setAttribute("data-scroll-speed", "-0.5");
-      console.log(image.getAttribute("data-scroll-speed"));
     } else {
       // When screen width is more than 768px
       image.setAttribute("data-scroll-speed", "-1.5");
     }
   });
-  console.log("ABC");
 }
 
 locoInitialize();

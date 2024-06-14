@@ -206,11 +206,6 @@ body {
   margin: 0 2.5vw;
 }
 
-path,
-polyline {
-  stroke: lightseagreen;
-}
-
 #imagery {
   display: flex;
   justify-content: space-between;
@@ -223,6 +218,7 @@ polyline {
 #imagery #imglef {
   width: 30%;
   height: auto;
+  padding-bottom: 20vh;
 }
 
 #imglef h1 {
@@ -382,19 +378,69 @@ polyline {
   #loader h1 {
     left: 50% !important;
   }
-  /* FIRST ROW*/
+  /* ROW*/
 
   .row {
-    margin: 0 -1vw;
+    flex-direction: column;
+    margin-top: 0vw;
+    line-height: 1.2;
+    transform: translate(0, -20vw);
   }
 
-  .row h5 {
-    font-size: 2vw;
+  #row1 h1 {
+    order: 1;
+    font-size: 25vw;
+    margin-left: 20vw;
   }
+  #row1 h5 {
+    font-size: 3vw;
+    transform: translate(-12vw, 105vw);
+  }
+  #row2 h1 {
+    order: 2;
+    margin-left: 20vw;
+    font-size: 23vw;
+  }
+  #row2 img {
+    order: 3;
+    display: none;
+  }
+  #row2 #soft {
+    font-size: 20vw;
+    margin-right: 20vw;
+  }
+  .text:first-child {
+    background-color: yellow !important;
+  }
+
   /*IMAGERY*/
+  #imagery {
+    flex-direction: column;
+    gap: 60vw;
+  }
+  #imgrig {
+    padding-top: 21vh;
+    order: -1;
+    width: 100% !important;
+    height: 250px;
+  }
+  #imgrig .imgcntnr {
+    width: 50vw;
+    height: 80vw;
+  }
+  #imagery #imglef {
+    order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding-bottom: 2vw;
+  }
   #imglef h1 {
     margin-bottom: 5vh;
-    font-size: 5vw;
+    font-size: 7vw;
+    white-space: normal;
+    content: "a";
   }
   /*SKILLS*/
   .skills h5 {
