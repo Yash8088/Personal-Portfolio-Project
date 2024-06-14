@@ -377,10 +377,10 @@ polyline {
 @media (max-width: 768px) {
   /* LOADER */
   #loader #topheading {
-    left: 36%;
+    left: 50%;
   }
   #loader h1 {
-    left: 36% !important;
+    left: 50% !important;
   }
   /* FIRST ROW*/
 
