@@ -1154,7 +1154,7 @@ body {
 }
 
 #elem {
-  width: 100%;
+  width: 50vh;
   position: relative;
 }
 
