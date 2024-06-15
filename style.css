@@ -136,17 +136,6 @@ body {
   background-color: lightseagreen;
   /* delay to make a gap visible */
 }
-/*#line2 {
-  line 2 is visible at the beginning
-  right: 0;
-  width: 100%;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
-}*/
-
-/*#nav a:hover #line2 {
-  decrease line2 width to make it dissapear
-  width: 0;
-}*/
 
 #nav a:hover #line1 {
   /*increase line1 to make it visible*/
