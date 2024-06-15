@@ -168,10 +168,10 @@ function updateScrollSpeed() {
 locoInitialize();
 
 // Initial check
-updateScrollSpeed();
+//updateScrollSpeed();
 
 // Add event listener for window resize
-window.addEventListener("resize", updateScrollSpeed);
+//window.addEventListener("resize", updateScrollSpeed);
 
 revealToSpan();
 valueSetters();
