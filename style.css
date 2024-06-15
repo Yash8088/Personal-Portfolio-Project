@@ -1238,7 +1238,7 @@ body {
 
   position: relative; /* in order to see it*/
   width: 100%;
-  min-height: 60vh;
+  min-height: 80vh;
   background-color: lightseagreen;
   align-items: center;
   justify-content: center;
