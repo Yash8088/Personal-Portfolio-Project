@@ -24,6 +24,7 @@
   max-width: 100%;
   position: relative;
 } */
+
 html,
 body {
   overflow-x: hidden;
@@ -67,6 +68,13 @@ body {
 #loader h1 span {
   font-size: 7vw;
   font-family: font3;
+}
+#loader #spin {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  transform: translate(0%, 1100%);
 }
 
 #topheading h5 {
@@ -375,6 +383,13 @@ body {
   }
   #loader h1 {
     left: 50% !important;
+  }
+  #loader #spin {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    transform: translate(0%, 1400%);
   }
   /* ROW*/
 

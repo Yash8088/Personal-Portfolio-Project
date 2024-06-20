@@ -32,6 +32,11 @@ function revealToSpan() {
 }
 
 function loaderAnimation() {
+  var spin = document.getElementById("spin");
+  if (spin) {
+    spin.style.display = "none";
+  }
+
   var tl = gsap.timeline(); /*gsap timeline */
   tl.from("#loader .child span", {
     x: 100,
