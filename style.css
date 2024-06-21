@@ -12,6 +12,10 @@
   font-family: "font3";
   src: url("/GroteskMid.ttf") format("truetype");
 }
+@font-face {
+  font-family: "font4";
+  src: url("/Sweet\ Sensations.ttf") format("truetype");
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -69,6 +73,7 @@ body {
   font-size: 7vw;
   font-family: font3;
 }
+
 #loader #spin {
   display: flex;
   justify-content: center;
@@ -183,10 +188,10 @@ body {
 
 .row .parent .child span {
   /*green text  SOFTWARE*/
-  font-family: font1;
+  font-family: font4;
   font-style: italic;
 
-  padding-right: 1vh;
+  padding-right: 5vh;
   color: lightseagreen;
 }
 
@@ -335,7 +340,7 @@ body {
 }
 
 #work .workrow {
-  padding: 0 12vw; /* left and right padding no top bottom */
+  padding: 0 7vw; /* left and right padding no top bottom */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -389,7 +394,7 @@ body {
     justify-content: center;
     width: 100%;
     position: absolute;
-    transform: translate(0%, 1400%);
+    transform: translate(0%, 1100%);
   }
   /* ROW*/
 
@@ -407,7 +412,7 @@ body {
   }
   #row1 h5 {
     font-size: 3vw;
-    transform: translate(-12vw, 105vw);
+    transform: translate(-12vw, 120vw);
   }
   #row2 h1 {
     order: 2;
@@ -419,7 +424,7 @@ body {
     display: none;
   }
   #row2 #soft {
-    font-size: 20vw;
+    font-size: 27vw;
     margin-right: 20vw;
   }
   .text:first-child {
@@ -592,6 +597,13 @@ body {
   .foooter::before {
     width: 20vw !important;
   }
+
+  .mazsmall {
+    font-style: italic;
+    font-family: font4 !important;
+    color: lightseagreen;
+    margin-right: 3vw !important;
+  }
 }
 
 .scard h4 {
@@ -646,8 +658,20 @@ body {
 
 .maz {
   font-style: italic;
-
+  font-family: font4 !important;
   color: lightseagreen;
+}
+.mazsmall {
+  font-style: italic;
+  font-family: font4 !important;
+  color: lightseagreen;
+  margin-right: 1vw;
+}
+.mazcard {
+  font-style: italic;
+  font-family: font4 !important;
+  color: lightseagreen;
+  margin-right: 1vh;
 }
 
 .workrow h1 .mini {
