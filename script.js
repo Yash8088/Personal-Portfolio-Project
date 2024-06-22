@@ -170,6 +170,22 @@ function updateScrollSpeed() {
   });
 }
 
+function navRedirect() {
+  document.querySelectorAll("#nav a[data-target]").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("data-target");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
+}
+
 locoInitialize();
 
 // Initial check
@@ -186,6 +202,7 @@ window.onload = function () {
 };
 
 locoInitialize();
+navRedirect();
 
 // Call the function to rotate images based on scroll position
 
