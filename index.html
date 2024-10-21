@@ -23,10 +23,14 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
       </div>
       <h1 class="reveal">
         <span>Yash</span>
-        <span class = maz>Amin</span>
+        <span class="maz">Amin</span>
         <span>is</span>
         <span>a</span>
       </h1>
+      <div id="spin">
+        <svg width="50" height="50" stroke="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_V8m1{transform-origin:center;animation:spinner_zKoa 2s linear infinite}.spinner_V8m1 circle{stroke-linecap:round;animation:spinner_YpZS 1.5s ease-in-out infinite}@keyframes spinner_zKoa{100%{transform:rotate(360deg)}}@keyframes spinner_YpZS{0%{stroke-dasharray:0 150;stroke-dashoffset:0}47.5%{stroke-dasharray:42 150;stroke-dashoffset:-16}95%,100%{stroke-dasharray:42 150;stroke-dashoffset:-59}}</style><g class="spinner_V8m1"><circle cx="12" cy="12" r="9.5" fill="none" stroke-width="3"></circle></g></svg>
+      </svg>      
+      </div>
     </div>
 
     <div id="cursor">
@@ -96,42 +100,42 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
 
       <div id="home">
         <div id="nav">
-          <a href="#nav">
+          <a data-target="home">
             Yash Amin
             <span id="line1" class="line"></span>
             <!--<span id="line2" class="line"></span> -->
           </a>
 
-          <a href="#workrow">
+          <a data-target="workrow1">
             Works
             <span id="line1" class="line"></span>
             <!-- <span id="line2" class="line"></span> -->
           </a>
 
-          <a href="#footer">
+          <a data-target="footer">
             Socials
             <span id="line1" class="line"></span>
             <!-- <span id="line2" class="line"></span> -->
           </a>
 
-          <a href="#footer">
+          <a href="mailto:yashamin888@gmail.com">
             Contact
             <span id="line1" class="line"></span>
             <!-- <span id="line2" class="line"></span> -->
           </a>
         </div>
-        <div class="row">
+        <div class="row" id="row1">
           <h1 class="reveal">Creative</h1>
           <div class="text">
             <h5 class="reveal">CURRENTLY AVAILABLE FOR</h5>
-            <h5 class="reveal">SUMMER 2024 - SUMMER 2025</h5>
+            <h5 class="reveal">SUMMER 2025</h5>
           </div>
           <div class="text">
-            <h5 id="local-time" class="reveal">LOCATED IN </h5>
-            <h5 id="gmt-offset" class="reveal">NEWARK NJ</h5>
+            <h5 class="reveal">LOCATED IN </h5>
+            <h5  class="reveal">NEWARK NJ</h5>
           </div>
         </div>
-        <div class="row">
+        <div class="row" id="row2">
           <img id="downArrow" src="./down-arrowhead.svg" alt="" />
           <h1 class="reveal"><span id="soft">Software</span></h1>
           <h1 class="reveal">Engineer</h1>
@@ -139,86 +143,92 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
         <div id="imagery">
           <div id="imglef">
             <h1>
-              I AM YASH AMIN, I<br />AM A <span>SOFTWARE ENGINEER</span
-              ><br />THAT IS PASSIONATE IN<br />
-              FRONT-END &<br />
-              BACK-END DEVELOPMENT.
+              I AM YASH AMIN, I AM A <span class ="maz">Software Engineer</span>
+                THAT IS PASSIONATE IN
+                FRONT-END &
+                BACK-END DEVELOPMENT.
             </h1>
           </div>
           <div id="imgrig">
-            <div class="imgcntnr">
-              <img src="" alt="">
+            <div 
+              class="imgcntnr"
+              >
+              </div>
+            <div
+              class="imgcntnr"
+            >
+              </div>
+            <div 
+              class="imgcntnr"
+             >
             </div>
-            <div class="imgcntnr"></div>
-            <div class="imgcntnr"></div>
           </div>
         </div>
         <div id="work">
             <div class="skills">
                 <h5>
-                S<span class="maz">k</span>ills
+                S<span class="mazsmall">k</span>ills
                 </h5>
-
             
-                <div id="icons">
-                    <div class="front">
-                        <h4>FRONT-END</h4>
-                        <div class="icon-cnt">
-                            <img src="css-3.png" alt="">
-                            <h3>CSS</h3>
-                        </div>
-                        <div class="icon-cnt">
-                            <img src="html-5.png" alt="">
-                            <h3>HTML</h3>
-                        </div>
-                       <div class="icon-cnt">
-                            <img src="java-script.png" alt="">
-                            <h3>JAVASCRIPT</h3>
-                       </div>
-                        
-                    </div>
-                  <div class="back">
-                    <h4>BACK-END</h4>
+                <div class="icons">
+                  <div class="scard scard1">
+                    <h4>FRONTEND</h4>
                     <div class="icon-cnt">
-                        <img src="java.png" alt="">
-                        <h3>JAVA</h3>
+                      <img src="html-5.png" alt="" />
+                      <h3>HTML</h3>
                     </div>
-                   <div class="icon-cnt">
-                        <img src="python.png" alt="">
-                        <h3>PYTHON</h3>
-                   </div>
-                   <div class="icon-cnt">
-                        <img src="c-.png" alt="">
-                        <h3>C++</h3>
-                   </div>
+                    <div class="icon-cnt">
+                      <img src="css-3.png" alt="" />
+                      <h3>CSS</h3>
+                    </div>
+                    <div class="icon-cnt">
+                      <img src="java-script.png" alt="" />
+                      <h3>JAVASCRIPT</h3>
+                    </div>
                   </div>
-                  <div class="frame">
-                    <h4> FRAMEWORKS</h4>
+                  <div class="scard scard2">
+                    <h4>BACKEND</h4>
                     <div class="icon-cnt">
-                        <img src="physics.png" alt="">
-                        <h3>REACT</h3>
+                      <img src="java.png" alt="" />
+                      <h3>JAVA</h3>
                     </div>
-                   <div class="icon-cnt">
-                        <img src="programing.png" alt="">
-                        <h3>NODEJS</h3>
-                   </div>
-                   <div class="icon-cnt">
-                    <img 
-                    src="gsap.png" alt="">
-                    <h3>GSAP</h3>
-                   </div>
-                   <div class="icon-cnt">
-                        <img 
-                        src="tailwindcss.png" alt="">
-                        <h3>TAILWIND</h3>
-                   </div>
-                   
+                    <div class="icon-cnt">
+                      <img src="c-.png" alt="" />
+                      <h3>C++</h3>
+                    </div>
+                    <div class="icon-cnt">
+                      <img src="python.png" alt="" />
+                      <h3>PYTHON</h3>
+                    </div>
+                    <div class="icon-cnt">
+                      <img src="MongoDB.png" alt="" />
+                      <h3>MONGODB</h3>
+                    </div>
+                  </div>
+                  <div class="scard scard3">
+                    <h4>FRAMEWORKS</h4>
+                    <div class="icon-cnt">
+                      <img src="physics.png" alt="" />
+                      <h3>REACT</h3>
+                    </div>
+                    <div class="icon-cnt">
+                      <img src="tailwindcss.png" alt="" />
+                      <h3>TAILWIND</h3>
+                    </div>
+                    <div class="icon-cnt">
+                      <img src="gsap.png" alt="" />
+                      <h3>GSAP</h3>
+                    </div>
+                    <div class="icon-cnt">
+                      <img src="programing.png" alt="" />
+                      <h3>NODEJS</h3>
+                    </div>
                   </div>
                 </div>
             </div>
-          <div class="workrow">
+          <div class="workrow" id="workrow1">
             <h1>
-              Feat Wo<span class="maz">r</span>ks
+              Feat Wo<span class="mazsmall">r</span>ks
               <div class="mini">(05)</div>
             </h1>
             <svg
@@ -252,7 +262,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 alt=""
               />
             </div>
-            <div class="cnt cnt2" data-url="https://github.com/Yash8088/fullstack_app">
+            <div class="cnt cnt2" data-url="https://innovativemindsagency.vercel.app/">
               <img
                 data-color="dfd7f2"
                 data-index="1"
@@ -269,26 +279,125 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
           <div class="aboutmerow">
             <h1>
          
-              Ab<span class="maz">o</span>ut Me /
+              Ab<span class="mazsmall">o</span>ut Me /
             </h1>
           </div>
-          <div id="aboutmeimage">
-            <div class="personalimg">
-              <img
-                src="/portrait.jpg"
-                alt=""
-              />
+          <div class="wrapper">
+            <div class="bubcontainer">
+              <div class="bubble">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="bubble">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="bubble">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="bubble">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="bubble">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="bubcontainer2">
+              <div class="bubble">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="bubble">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="bubble">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="bubble">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <div class="bubble">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <div class="cardback">
+                  <div class="back-content">
+                    <img 
+                 
+                    id="self"
+                    src="portrait.jpg" 
+                    alt="" />
+                    <strong>Yash Amin</strong>
+                  </div>
+                </div>
+                <div class="cardfront">
+                  <div class="img">
+                    <div class="circle"></div>
+                    <div class="circle" id="right"></div>
+                    <div class="circle" id="bottom"></div>
+                  </div>
+      
+                  <div class="front-content">
+                    <small class="badge">About Me</small>
+                    <h5>
+                      I'm a <span class="mazcard">Computer Science</span> major at New Jersey 
+                      Institute of Technology, passionate about turning innovative
+                      ideas into reality. As an aspiring <span class="mazcard">software engineer </span> 
+                      , I continually develop my skills through <span class="mazcard"> hands-on projects </span>
+                    and creative problem-solving.
+                    </h5>
+                    <div class="description">
+                      <div class="title">
+                        <p class="title">
+                          <strong>Yash Amin</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="aboutmedesc">
-            <h5>
-              I'm a Computer Science major at New Jersey <br />
-              Institute of Technology, passionate about turning innovative<br />
-              ideas into real-world projects. As an aspiring software <br />
-              engineer, I continually develop my skills through hands-on  <br />
-              projects and creative problem-solving. 
-            </h5>
-          </div>
+      
         </div>
 
         <div id="footer">
@@ -314,7 +423,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 <h5>@yash8088</h5>
                 <img id=github src="./github-svgrepo-com.svg" alt="">
             </a>
-            <a href="https://www.linkedin.com/in/yash-amin-ab788b255/" class="footercnt">
+            <a href="https://www.linkedin.com/in/yashamin8" class="footercnt">
                 <span>LINKEDIN</span>  
                 <h5>@yashamin</h5>  
                 <img id=linkedin src="./linkedin-svgrepo-com.svg" alt="">
@@ -324,23 +433,17 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
       </div>
     </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script 
-    src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js" 
-    integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g==" 
-    crossorigin="anonymous" 
-    referrerpolicy="no-referrer">
-
-    </script>
     <script 
     src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js">
     </script>
     <!-- locomotivescroll   -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    ></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
 
     <script src="script.js"></script>
   </body>
