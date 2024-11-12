@@ -32,6 +32,11 @@ function revealToSpan() {
 }
 
 function loaderAnimation() {
+  var spin = document.getElementById("spin");
+  if (spin) {
+    spin.style.display = "none";
+  }
+
   var tl = gsap.timeline(); /*gsap timeline */
   tl.from("#loader .child span", {
     x: 100,
@@ -158,22 +163,36 @@ function updateScrollSpeed() {
     if (window.matchMedia("(max-width: 768px)").matches) {
       // When screen width is 768px or less
       image.setAttribute("data-scroll-speed", "-0.5");
-      console.log(image.getAttribute("data-scroll-speed"));
     } else {
       // When screen width is more than 768px
       image.setAttribute("data-scroll-speed", "-1.5");
     }
   });
-  console.log("ABC");
+}
+
+function navRedirect() {
+  document.querySelectorAll("#nav a[data-target]").forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("data-target");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    });
+  });
 }
 
 locoInitialize();
 
 // Initial check
-updateScrollSpeed();
+//updateScrollSpeed();
 
 // Add event listener for window resize
-window.addEventListener("resize", updateScrollSpeed);
+//window.addEventListener("resize", updateScrollSpeed);
 
 revealToSpan();
 valueSetters();
@@ -181,6 +200,9 @@ valueSetters();
 window.onload = function () {
   loaderAnimation();
 };
+
+locoInitialize();
+navRedirect();
 
 // Call the function to rotate images based on scroll position
 

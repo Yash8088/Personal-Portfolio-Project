@@ -23,10 +23,14 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
       </div>
       <h1 class="reveal">
         <span>Yash</span>
-        <span class = maz>Amin</span>
+        <span class="maz">Amin</span>
         <span>is</span>
         <span>a</span>
       </h1>
+      <div id="spin">
+        <svg width="50" height="50" stroke="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><style>.spinner_V8m1{transform-origin:center;animation:spinner_zKoa 2s linear infinite}.spinner_V8m1 circle{stroke-linecap:round;animation:spinner_YpZS 1.5s ease-in-out infinite}@keyframes spinner_zKoa{100%{transform:rotate(360deg)}}@keyframes spinner_YpZS{0%{stroke-dasharray:0 150;stroke-dashoffset:0}47.5%{stroke-dasharray:42 150;stroke-dashoffset:-16}95%,100%{stroke-dasharray:42 150;stroke-dashoffset:-59}}</style><g class="spinner_V8m1"><circle cx="12" cy="12" r="9.5" fill="none" stroke-width="3"></circle></g></svg>
+      </svg>      
+      </div>
     </div>
 
     <div id="cursor">
@@ -129,7 +133,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
 
       <div id="home">
         <div id="nav">
-          <a href="#nav">
+          <a data-target="home">
             Yash Amin
             <span id="line1" class="line"></span>
             <!--<span id="line2" class="line"></span> -->
@@ -141,7 +145,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
             <!-- <span id="line2" class="line"></span> -->
           </a>
 
-          <a href="#footer">
+          <a data-target="footer">
             Socials
             <span id="line1" class="line"></span>
             <!-- <span id="line2" class="line"></span> -->
@@ -153,10 +157,11 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
             <!-- <span id="line2" class="line"></span> -->
           </a>
         </div>
-        <div class="row">
+        <div class="row" id="row1">
           <h1 class="reveal">Creative</h1>
           <div class="text">
             <h5 class="reveal">CURRENTLY AVAILABLE FOR</h5>
+            <h5 class="reveal">SUMMER 2025</h5>
             <h5 class="reveal">SUMMER 2025</h5>
           </div>
           <div class="text">
@@ -164,7 +169,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
             <h5  class="reveal">NEWARK NJ</h5>
           </div>
         </div>
-        <div class="row">
+        <div class="row" id="row2">
           <img id="downArrow" src="./down-arrowhead.svg" alt="" />
           <h1 class="reveal"><span id="soft">Software</span></h1>
           <h1 class="reveal">Engineer</h1>
@@ -172,10 +177,10 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
         <div id="imagery">
           <div id="imglef">
             <h1>
-              I AM YASH AMIN, I<br />AM A <span>SOFTWARE ENGINEER</span
-              ><br />THAT IS PASSIONATE IN<br />
-              FRONT-END &<br />
-              BACK-END DEVELOPMENT.
+              I AM YASH AMIN, I AM A <span class ="maz">Software Engineer</span>
+                THAT IS PASSIONATE IN
+                FRONT-END &
+                BACK-END DEVELOPMENT.
             </h1>
           </div>
           <div id="imgrig">
@@ -196,7 +201,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
         <div id="work">
             <div class="skills">
                 <h5>
-                S<span class="maz">k</span>ills
+                S<span class="mazsmall">k</span>ills
                 </h5>
             
                 <div class="icons">
@@ -208,6 +213,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     </div>
                     <div class="icon-cnt">
                       <img src="css-3.png" alt="" />
+                      <h3>CSS</h3>
                       <h3>CSS</h3>
                     </div>
                     <div class="icon-cnt">
@@ -271,9 +277,9 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                   </div>
                 </div>
             </div>
-          <div class="workrow" id="worknav">
+          <div class="workrow" id="workrow1">
             <h1>
-              Feat Wo<span class="maz">r</span>ks
+              Feat Wo<span class="mazsmall">r</span>ks
               <div class="mini">(05)</div>
             </h1>
             <svg
@@ -308,7 +314,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 alt=""
               />
             </div>
-            <div class="cnt cnt2" data-url="https://github.com/Yash8088/fullstack_app">
+            <div class="cnt cnt2" data-url="https://innovativemindsagency.vercel.app/">
               <img
                 data-color="dfd7f2"
                 data-index="1"
@@ -336,7 +342,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
           <div class="aboutmerow">
             <h1>
          
-              Ab<span class="maz">o</span>ut Me /
+              Ab<span class="mazsmall">o</span>ut Me /
             </h1>
           </div>
           <div class="wrapper">
@@ -436,10 +442,10 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                   <div class="front-content">
                     <small class="badge">About Me</small>
                     <h5>
-                      I'm a <span class="maz">Computer Science</span> major at New Jersey 
+                      I'm a <span class="mazcard">Computer Science</span> major at New Jersey 
                       Institute of Technology, passionate about turning innovative
-                      ideas into reality. As an aspiring <span class="maz">software engineer </span> 
-                      , I continually develop my skills through <span class="maz"> hands-on projects </span>
+                      ideas into reality. As an aspiring <span class="mazcard">software engineer </span> 
+                      , I continually develop my skills through <span class="mazcard"> hands-on projects </span>
                     and creative problem-solving.
                     </h5>
                     <div class="description">
@@ -480,7 +486,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 <h5>@yash8088</h5>
                 <img id=github src="./github-svgrepo-com.svg" alt="">
             </a>
-            <a href="https://www.linkedin.com/in/yash-amin-ab788b255/" class="footercnt">
+            <a href="https://www.linkedin.com/in/yashamin8" class="footercnt">
                 <span>LINKEDIN</span>  
                 <h5>@yashamin</h5>  
                 <img id=linkedin src="./linkedin-svgrepo-com.svg" alt="">
