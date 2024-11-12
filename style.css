@@ -463,12 +463,25 @@ body {
   }
   /*SKILLS*/
   .skills h5 {
-    margin-bottom: 1vh;
+    margin-bottom: -15vh;
     width: 100%;
     font-size: 8vh;
     padding-top: 5vh;
-    margin-left: -0.5vh;
-    transform: translate(0, 0);
+    padding-left: 17vh;
+    padding-right: 10vh;
+    margin-left: 13vw;
+
+    border-bottom: 0vh;
+    /* width: 120vh;
+  font-family: font3;
+  font-weight: 200;
+  font-size: 8vh;
+  padding-top: 10vh;
+  margin-left: 30vh;
+  transform: translate(-10vh, 0);
+  border-bottom: 0.3vh solid #3b3835;
+  margin-bottom: 10vh;
+  color: #3b3835; */
   }
   .icons {
     display: flex;
@@ -483,24 +496,25 @@ body {
   }
   .icons h4 {
     margin-bottom: 3vh !important;
-    font-size: 8vw !important;
+    font-size: 7vw !important;
     height: 20%;
   }
   .icons .icon-cnt {
     justify-content: center;
     display: flex;
     align-items: center;
-    height: 20%;
+    height: 13%;
 
-    padding-bottom: 7vh;
+    padding-bottom: 2vh;
+    margin-bottom: -5vh;
   }
   .icon-cnt img {
-    width: 10vw !important;
+    width: 5vw !important;
 
     height: auto;
   }
   .icon-cnt h3 {
-    font-size: 5vw !important;
+    font-size: 3vw !important;
   }
 
   /*FEAT WORKS*/
@@ -519,18 +533,31 @@ body {
     align-items: center !important;
     flex-direction: column;
   }
+  #images .imagesrow {
+    gap: 10vh !important;
+    margin-bottom: 10vh !important;
+  }
   .cnt img {
-    width: 155% !important;
+    width: 205% !important;
   }
   .cnt {
     margin: 5vw 0;
     width: 50% !important;
   }
   .cnt1 {
-    width: 90% !important;
+    margin-left: 3vw !important;
+    margin-top: -0vh !important;
+    width: 100% !important;
   }
   .cnt2 {
+    margin-right: 5vw !important;
+    margin-top: -0vh !important;
     width: 70% !important;
+  }
+  .cnt3 {
+    margin-left: 3vw !important;
+    margin-top: -0vh !important;
+    width: 50% !important;
   }
 
   /*About Me */
@@ -622,15 +649,16 @@ body {
   justify-content: baseline;
 
   display: flex;
+  margin-bottom: -15px;
 }
 .icon-cnt img {
-  width: 5vw;
+  width: 2vw;
   margin: 1vw 1vw;
 }
 .icon-cnt h3 {
   font-family: font2;
   font-weight: 100;
-  font-size: 2vw;
+  font-size: 1.5vw;
   opacity: 0.8;
   margin-left: 3vw;
   justify-content: center;
@@ -694,13 +722,20 @@ body {
 
 #images {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+  flex-direction: column;
+  /*align-items: baseline;*/
+  /*justify-content: space-between;*/
   margin-top: 6vw;
-  position: relative;
+  /*position: relative;*/
   width: 100%;
   padding: 0 5vw;
   margin-bottom: 20vh;
+}
+
+#images .imagesrow {
+  display: flex;
+  gap: 20vh;
+  margin-bottom: 30vh;
 }
 
 .cnt {
@@ -720,7 +755,13 @@ body {
 }
 
 .cnt2 {
+  margin-top: 25vh;
   width: 28%;
+}
+.cnt3 {
+  margin-left: 4vw;
+  margin-top: -15vh;
+  width: 50%;
 }
 
 #aboutme::before {
@@ -1208,16 +1249,39 @@ body {
 }
 
 .crow .ccircle {
-  width: 2svw;
+  width: 3svw;
   height: 2vw;
-  border: 2px solid #fff;
+
   border-radius: 50%;
+}
+
+.project1 .ccircle {
+  border: 3px solid #d7ddf2;
+}
+
+.project2 .ccircle {
+  width: 3.2svw;
+  height: 2vw;
+  border: 3px solid #dfd7f2;
+}
+
+.project3 .ccircle {
+  width: 3.2svw;
+  height: 2vw;
+  border: 3px solid #fcd299;
 }
 
 .crow .ccapsule {
   padding: 0.7vw 3vw;
   border-radius: 100px;
   background-color: #fff;
+}
+
+.crow .capsuledesc {
+  padding: 0.7vw 3vw;
+  border-radius: 100px;
+  background-color: #fff;
+  color: lightseagreen;
 }
 
 #elem img {
