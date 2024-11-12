@@ -31,10 +31,11 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
 
     <div id="cursor">
       <!-- first project hover -->
-      <div>
+      <div class="project1">
         <div class="crow">
           <div class="ccircle"></div>
           <div class="ccapsule">Explore</div>
+          <div class="capsuledesc">Fortran-95 Compiler</div>
         </div>
 
         <div id="elem">
@@ -61,10 +62,11 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
         </div>
       </div>
       <!-- second project hover -->
-       <div>  
+       <div class="project2">  
             <div class="crow">
               <div class="ccircle"></div>
               <div class="ccapsule">Explore</div>
+              <div class="capsuledesc">Innovative Minds Agency</div>
             </div>
             <div id="elem">
               <img
@@ -89,6 +91,37 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
               />
             </div>
           </div> 
+          <!-- third project hover -->
+          <div class="project3">
+            <div class="crow">
+              <div class="ccircle"></div>
+              <div class="ccapsule">Explore</div>
+              <div class="capsuledesc">Jupyter Data Science</div>
+            </div>
+    
+            <div id="elem">
+              <img
+                src="data1.png"
+                alt=""
+              />
+              <img
+                src="data2.png"
+                alt=""
+              />
+              <img
+                src="data3.png"
+                alt=""
+              />
+              <img
+                src="data4.png"
+                alt=""
+              />
+              <img
+                src="data5.png"
+                alt=""
+              />
+            </div>
+          </div>
     </div>
 
     <div id="main">
@@ -102,8 +135,8 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
             <!--<span id="line2" class="line"></span> -->
           </a>
 
-          <a href="#worknav">
-            Works
+          <a href="https://docs.google.com/document/d/1-BuOwoiw7_iOdH5d9Twr_3rpjzJ8bdx1ZKkwlTO_T34/edit?tab=t.0">
+            Resume
             <span id="line1" class="line"></span>
             <!-- <span id="line2" class="line"></span> -->
           </a>
@@ -124,7 +157,7 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
           <h1 class="reveal">Creative</h1>
           <div class="text">
             <h5 class="reveal">CURRENTLY AVAILABLE FOR</h5>
-            <h5 class="reveal">SUMMER 2024 - SUMMER 2025</h5>
+            <h5 class="reveal">SUMMER 2025</h5>
           </div>
           <div class="text">
             <h5 class="reveal">LOCATED IN </h5>
@@ -196,9 +229,17 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                       <img src="python.png" alt="" />
                       <h3>PYTHON</h3>
                     </div>
+                    <div class="icon-cnt">
+                      <img src="c.png" alt="" />
+                      <h3>C</h3>
+                    </div>
+                    <div class="icon-cnt">
+                      <img src="mongo.png" alt="" />
+                      <h3>MONGO DB</h3>
+                    </div>
                   </div>
                   <div class="scard scard3">
-                    <h4>FRAMEWORKS</h4>
+                    <h4>FRAMEWORKS & TECH</h4>
                     <div class="icon-cnt">
                       <img src="physics.png" alt="" />
                       <h3>REACT</h3>
@@ -214,6 +255,18 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                     <div class="icon-cnt">
                       <img src="programing.png" alt="" />
                       <h3>NODEJS</h3>
+                    </div>
+                    <div class="icon-cnt">
+                      <img src="matplotlib.png" alt="" />
+                      <h3>MATPLOTLIB</h3>
+                    </div>
+                    <div class="icon-cnt">
+                      <img src="pandas.png" alt="" />
+                      <h3>PANDAS</h3>
+                    </div>
+                    <div class="icon-cnt">
+                      <img src="linux.png" alt="" />
+                      <h3>LINUX</h3>
                     </div>
                   </div>
                 </div>
@@ -244,12 +297,13 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
             </svg>
           </div>
           <div id="images">
+            <div class="imagesrow">
             <div class="cnt cnt1" data-url="https://github.com/Yash8088/Fortran95-Compiler">
               <img
                 data-color="d7ddf2"
                 data-index="0"
                 data-scroll
-                data-scroll-speed="-1.5"
+                data-scroll-speed="-3"
                 src="https://erainnovator.com/wp-content/uploads/2021/05/Fortran-Programming-Language.png"
                 alt=""
               />
@@ -261,6 +315,17 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
                 data-scroll
                 data-scroll-speed="-1.5"
                 src="hero.gif"
+                alt=""
+              />
+            </div>
+          </div>
+            <div class="cnt cnt3" data-url="https://github.com/Yash8088/DataScience">
+              <img
+                data-color="FCD299"
+                data-index="2"
+                data-scroll
+                data-scroll-speed="-1.5"
+                src="pythonproject.png"
                 alt=""
               />
             </div>
@@ -436,7 +501,13 @@ https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
 
+    <!-- vercel analytics   -->
+
+    <script defer src="/_vercel/insights/script.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
