@@ -131,6 +131,12 @@ function cardHoverEffect() {
 
       document.querySelector("#work").style.backgroundColor =
         "#" + dets.target.dataset.color;
+
+      const color = "#" + dets.target.dataset.color;
+      const projectTitles = document.querySelectorAll(".project-title");
+      projectTitles.forEach((title) => {
+        title.style.color = color;
+      });
     });
 
     cnt.addEventListener("mouseleave", function (dets) {
@@ -139,6 +145,11 @@ function cardHoverEffect() {
       ].style.opacity = 0;
       showingImage.style.filter = "grayscale(0)";
       document.querySelector("#work").style.backgroundColor = "#f2f2f2";
+
+      const projectTitles = document.querySelectorAll(".project-title");
+      projectTitles.forEach((title) => {
+        title.style.color = "black";
+      });
     });
   });
 }
