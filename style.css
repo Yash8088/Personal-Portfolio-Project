@@ -511,7 +511,7 @@ body {
   .icon-cnt img {
     width: 5vw !important;
 
-    height: auto;
+    height: auto !important;
   }
   .icon-cnt h3 {
     font-size: 3vw !important;
