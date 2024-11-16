@@ -451,7 +451,7 @@ body {
   padding-left: 1vw;
   padding-right: 1vw;
   border-radius: 2vw;
-  fontsize: 1vw;
+  font-size: 1vw;
 }
 
 /* .project-title {
@@ -952,7 +952,6 @@ body {
 .cnt1 {
   width: 75%;
   height: 90%;
-  background-color: yellow;
 }
 .cnt1 img {
   width: 125%;
