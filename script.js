@@ -137,6 +137,11 @@ function cardHoverEffect() {
       projectTitles.forEach((title) => {
         title.style.color = color;
       });
+
+      const languageContainers = document.querySelectorAll(".languages-cnt");
+      languageContainers.forEach((languages) => {
+        languages.style.opacity = 0; // Hide languages
+      });
     });
 
     cnt.addEventListener("mouseleave", function (dets) {
@@ -149,6 +154,11 @@ function cardHoverEffect() {
       const projectTitles = document.querySelectorAll(".project-title");
       projectTitles.forEach((title) => {
         title.style.color = "black";
+      });
+
+      const allLanguages = document.querySelectorAll(".languages-cnt");
+      allLanguages.forEach((language) => {
+        language.style.opacity = 1; // Hide all individual languages
       });
     });
   });
@@ -167,7 +177,7 @@ function onCardClick() {
 //for smaller screens parallax
 function updateScrollSpeed() {
   const images = document.querySelectorAll(
-    'img[data-index="0"], img[data-index="1"]'
+    'img[data-index="0"], img[data-index="1"], img[data-index="2"]'
   );
 
   images.forEach((image) => {
