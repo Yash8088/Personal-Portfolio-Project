@@ -509,14 +509,10 @@ body {
   .project-title {
     font-size: 5vw !important;
   }
-  .languages {
-    background-color: red;
-  }
 }
 @media (max-width: 1024px) and (min-width: 769px) {
   .languages {
     font-size: 1vw !important;
-    background-color: #ffff00;
   }
   .cnt1 .project-title {
     transform: translate(0vw, -3vw);
