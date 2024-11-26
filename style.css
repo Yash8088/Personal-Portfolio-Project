@@ -449,7 +449,7 @@ body {
   font-family: font5;
   border: black 1px solid;
 
-  padding-top: 1vw;
+  padding-top: 0.7vw;
   padding-left: 1vw;
   padding-right: 1vw;
   border-radius: 2vw;
@@ -546,6 +546,12 @@ body {
   #loader #topheading {
     left: 50%;
   }
+  .row .text {
+    transform: translate(0vw, 2vw);
+    padding-bottom: 8vw;
+    margin-top: -6vw;
+  }
+
   #loader h1 {
     left: 50% !important;
   }
@@ -595,6 +601,7 @@ body {
   #imagery {
     flex-direction: column;
     gap: 60vw;
+    transform: translate(0vw, 6vw);
   }
   #imgrig {
     padding-top: 21vh;
@@ -894,6 +901,21 @@ body {
   font-size: 2vw;
 }
 
+/* Initial state: Invisible */
+.scard .icon-cnt h3,
+.scard .icon-cnt img {
+  opacity: 0;
+  transform: translateY(20px); /* Start below */
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When the element has the 'visible' class */
+.scard .icon-cnt h3.visible,
+.scard .icon-cnt img.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to original position */
+}
+
 .icons .icon-cnt {
   justify-content: baseline;
 
@@ -1041,6 +1063,96 @@ body {
   min-height: 50vh;
   background-color: #dedede;
   /* background-color: #f2f2f2; */
+}
+
+#aboutme-container {
+  max-width: 1200px; /* Set a max width for the section */
+  margin: 0 auto; /* Center the container on the page */
+}
+#aboutme-content {
+  background-color: yellow;
+
+  /* Arrange children side by side */
+  /* Space between the two sides */
+  align-items: center; /* Align vertically in the center */
+  /* Add spacing between the two sections */
+
+  overflow: visible;
+  width: 34vw;
+  height: 25vw;
+  z-index: 5000;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.year-role {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute the year and role evenly */
+  align-items: center; /* Align the items vertically in the center */
+  width: 100%; /* Make the year-role section take full width */
+  gap: 20vh;
+
+  margin-left: -20vh;
+  flex-grow: 1;
+  margin: 20px 0;
+  padding: 2vw 10vw;
+  /* transform: translate(-25vw, 3vw); */
+}
+
+.year,
+.role {
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.year {
+  font-size: 9vh;
+  font-weight: bold;
+  text-align: left;
+  /* Allow the year to take up available space */
+}
+
+.role {
+  width: 50vw;
+  margin-left: -10vh;
+  font-size: 2vw;
+  text-align: left;
+  font-family: font3;
+  transform: translate(10vw, -8vw);
+  background-color: yellow;
+  /* Allow the role to take up available space */
+}
+
+#aboutme-picture {
+  /* Take up half of the available space */
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+}
+
+#aboutme-picture img {
+  height: 100vh;
+  width: 70vh;
+  max-width: none; /* Make sure the image doesn’t overflow */
+  max-height: none; /* Adjust as needed for the height */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow */
+  /* transform: translate(-65vh, 0vh); */
 }
 .aboutmedesc {
   text-indent: 5em;
@@ -1325,10 +1437,11 @@ body {
   border-radius: 10px;
   backdrop-filter: blur(2px);
   width: fit-content;
+  font-family: font2;
 }
 .front-content h5 {
   font-size: 2vw;
-  font-family: font3;
+  font-family: font2;
   color: #f2f2f2;
   opacity: 1;
   border-radius: 7vh;
@@ -1355,6 +1468,9 @@ body {
 
 .title p {
   width: 50%;
+}
+.description .title p strong {
+  font-family: font2;
 }
 
 .card-footer {
@@ -1505,7 +1621,7 @@ body {
 }
 
 .crow .ccircle {
-  width: 5vh;
+  width: 3vh;
   height: 3vh;
 
   border-radius: 50%;
@@ -1527,13 +1643,6 @@ body {
   padding: 0.7vw 3vw;
   border-radius: 100px;
   background-color: #fff;
-}
-
-.crow .capsuledesc {
-  padding: 0.7vw 3vw;
-  border-radius: 100px;
-  background-color: #fff;
-  color: lightseagreen;
 }
 
 #elem img {

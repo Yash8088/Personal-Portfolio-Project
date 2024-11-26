@@ -194,18 +194,65 @@ function updateScrollSpeed() {
 function navRedirect() {
   document.querySelectorAll("#nav a[data-target]").forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("data-target");
-      const targetElement = document.getElementById(targetId);
+      e.preventDefault(); // Prevent the default anchor behavior (jumping to the target)
+
+      const targetId = this.getAttribute("data-target"); // Get the target ID from the data-target attribute
+      const targetElement = document.getElementById(targetId); // Get the element by ID
+
       if (targetElement) {
         window.scrollTo({
-          top: targetElement.offsetTop,
-          behavior: "smooth",
+          top: targetElement.offsetTop, // Scroll to the top position of the target element
+          behavior: "smooth", // Smooth scrolling
         });
       }
     });
   });
 }
+
+// Call the function to enable the navigation redirect
+navRedirect();
+
+function makeVisibile() {
+  // Select all h3 and img elements inside any .scard (scard1, scard2, scard3)
+  const elements = document.querySelectorAll(
+    ".scard .icon-cnt h3, .scard .icon-cnt img"
+  );
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Add the 'visible' class when the element enters the viewport
+          entry.target.classList.add("visible");
+          // Optionally stop observing the element once it's visible
+          observer.unobserve(entry.target);
+        } else {
+          // Optionally remove the 'visible' class when it exits the viewport
+          entry.target.classList.remove("visible");
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Trigger when 50% of the element is visible
+    }
+  );
+
+  // Observe each element
+  elements.forEach((element) => {
+    observer.observe(element);
+  });
+}
+
+window.onload = function () {
+  makeVisibile();
+};
+
+window.onload = function () {
+  makeVisibile();
+};
+
+// Call the function after the page is loaded
+document.addEventListener("DOMContentLoaded", makeVisibile);
 
 locoInitialize();
 
@@ -229,3 +276,4 @@ navRedirect();
 
 cardHoverEffect();
 onCardClick();
+makeVisibile();
