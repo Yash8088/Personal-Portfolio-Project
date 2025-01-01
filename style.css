@@ -823,7 +823,8 @@ body {
   }
 
   #self {
-    width: 69vw !important;
+    width: 65vw !important;
+    height: 96vw !important;
   }
 
   .back-content strong {
@@ -1323,6 +1324,7 @@ body {
 }
 #self {
   width: 33.5vw;
+  height: 46.5vw;
 }
 
 .content {
