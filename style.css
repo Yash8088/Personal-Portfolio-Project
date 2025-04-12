@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@800&family=Staatliches&display=swap");
 @font-face {
   font-family: "font1";
   src: url("/font1.woff2") format("woff2");
@@ -39,47 +38,6 @@
   max-width: 100%;
   position: relative;
 } */
-
-:root {
-  --vh: 1vh;
-}
-
-.panel {
-  height: 100vh; /* Fallback */
-  height: calc(var(--vh, 1vh) * 100);
-}
-
-/* Add to your existing CSS */
-#container {
-  overflow: hidden !important;
-  perspective: 1000px; /* Forces hardware acceleration */
-}
-
-.panel {
-  transform-style: preserve-3d;
-  backface-visibility: hidden;
-  will-change: transform; /* Prepare browser for animation */
-  pointer-events: none;
-}
-
-.panel.target,
-.panel.NJIT {
-  pointer-events: all;
-}
-.description.panel {
-  pointer-events: none; /* Prevent interaction with header */
-}
-
-/* Mobile-specific override */
-@media (max-width: 768px) {
-  [data-scroll-container] {
-    scroll-behavior: auto !important;
-  }
-
-  .panel {
-    transition: none !important;
-  }
-}
 
 html,
 body {
@@ -858,7 +816,6 @@ body {
   }
   .wrapper {
     padding-top: 5vh !important;
-    padding-bottom: 6vh !important;
   }
   .card {
     width: 60vw !important;
@@ -1114,6 +1071,8 @@ body {
   margin: 0 auto; /* Center the container on the page */
 }
 #aboutme-content {
+  background-color: yellow;
+
   /* Arrange children side by side */
   /* Space between the two sides */
   align-items: center; /* Align vertically in the center */
@@ -1210,21 +1169,196 @@ body {
   color: #3b3835;
 }
 
+/* aboutdesc */
+
 .aboutdesc {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  width: 135%;
-  margin-top: 5vh;
-  margin-left: -10vw;
-  min-height: 80vh;
-  gap: 5vw;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.textwrapper {
-  align-items: center;
+/* Each About Section as a full-page panel */
+.aboutimages {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  transition: transform 1s ease, opacity 1s ease;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center vertically */
+  background-color: #dedede;
+  padding: 2rem;
+  cursor: pointer;
+  /* Remove border and rounded corners */
+}
+
+/* Top Row: Company/Institution Name */
+.text-top {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 5rem;
+  font-weight: bold;
+}
+.text-top h3 {
+  font-family: font3;
+  position: relative;
+}
+
+.text-top h3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 50%; /* Start from the middle */
+  transform: translateX(-50%); /* Shift left by half its own width */
+  width: 50rem;
+  height: 2px;
+  background-color: lightseagreen;
+}
+/* Middle Row: logo on left, text on right */
+.about-middle {
+  width: 80%; /* Adjust as needed */
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the whole row */
+  gap: 5rem;
+}
+
+/* Logo container */
+.containerimage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerimage img {
+  width: 15rem; /* adjust size as needed */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.containerimage img:hover {
+  transform: scale(1.05);
+}
+
+/* Right Side: job title and date/location */
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the text block horizontally */
+  justify-content: center;
+  width: 100%;
+}
+.right-side h4 {
+  margin: 0 0 1rem;
+  font-size: 5rem;
+  text-align: center;
+  font-family: font3;
+  font-size: 4rem;
+  color: #3b3835;
+}
+.text-bottom {
+  margin: 0;
+  font-size: 2rem;
+  color: #3b3835;
+  text-align: center;
+  font-family: font1;
+}
+
+@media (max-width: 1200px) {
+  .text-top h3::after {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .text-top {
+    font-size: 4rem;
+  }
+
+  .right-side h4 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutimages {
+    padding: 1rem;
+    min-height: auto; /* Remove fixed height */
+    height: auto;
+    padding: 4rem 0; /* Add vertical padding */
+  }
+
+  .text-top {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .text-top h3::after {
+    width: 30rem;
+  }
+
+  .about-middle {
+    flex-direction: column; /* Stack logo and text vertically */
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .containerimage img {
+    width: 12rem;
+  }
+
+  .right-side h4 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .text-bottom {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-top {
+    font-size: 2.5rem;
+  }
+
+  .text-top h3::after {
+    width: 80%; /* Use percentage instead of fixed width */
+    max-width: 25rem;
+  }
+
+  .containerimage img {
+    width: 10rem;
+  }
+
+  .right-side h4 {
+    font-size: 2.5rem;
+  }
+
+  .text-bottom {
+    font-size: 1.6rem;
+  }
+
+  .about-middle {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Optional: For very small screens */
+@media (max-width: 360px) {
+  .text-top {
+    font-size: 2rem;
+  }
+
+  .right-side h4 {
+    font-size: 2rem;
+  }
+
+  .text-bottom {
+    font-size: 1.4rem;
+  }
 }
 
 /* bubble  */
@@ -1637,206 +1771,6 @@ body {
   color: #3b3835;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  /* overflow-x: hidden; */
-  height: 100%;
-}
-
-/* Updated CSS */
-#container {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-.panel {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
-/* Experience Header */
-.experience-header h1 {
-  font-size: 15vh;
-  font-family: font3;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  color: #3b3835;
-}
-
-/* Updated Responsive CSS */
-#container {
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-.panel {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
-/* Experience Header */
-.experience-header h1 {
-  font-size: clamp(3rem, 12vw, 15vh);
-  font-family: font3;
-  text-align: center;
-  max-width: 90%;
-  margin: 0 auto;
-  color: #3b3835;
-  line-height: 1.2;
-}
-
-/* Company Card Layout */
-.company-title {
-  font-size: clamp(2.5rem, 10vw, 20vh);
-  font-family: font3;
-  margin-bottom: clamp(1rem, 3vw, 2rem);
-  width: 90%;
-  position: relative;
-  display: inline-block;
-  padding: 0 5%;
-  text-align: center;
-}
-
-.company-title::after {
-  content: "";
-  position: absolute;
-  left: 15%;
-  bottom: 0;
-  width: 70%;
-  height: 2px;
-  background-color: lightseagreen;
-}
-
-.company-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(1rem, 3vw, 3rem);
-  width: 90%;
-  margin: 0 auto;
-}
-
-.company-logo {
-  width: min(40vh, 60vw);
-  max-width: 400px;
-  margin: 0 auto clamp(1rem, 3vw, 2rem);
-}
-
-.company-info {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1rem, 3vw, 5rem);
-  text-align: center;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
-.company-info h4 {
-  font-size: clamp(1.5rem, 6vw, 10vh);
-  font-family: font3;
-  color: #3b3835;
-}
-
-.company-info p {
-  font-size: clamp(1rem, 3vw, 5vh);
-  font-family: font1;
-}
-
-/* Desktop Layout */
-@media (min-width: 768px) {
-  .company-content {
-    flex-direction: row;
-    justify-content: space-between;
-
-    width: 85%;
-  }
-
-  .company-logo {
-    width: min(40vh, 30vw);
-    margin: 0 clamp(1rem, 3vw, 2rem) 0 0;
-  }
-
-  .company-info {
-    text-align: center;
-    align-items: flex-start;
-  }
-}
-
-/* Mobile Optimization */
-@media (max-width: 480px) {
-  .panel {
-    padding: 1rem;
-  }
-
-  .company-title::after {
-    left: 10%;
-    width: 80%;
-    height: 1.5px;
-  }
-
-  .company-info {
-    gap: 0.5rem;
-  }
-  .description.panel .mazsmall {
-    margin-right: 2vw !important;
-  }
-  .panel .mazsmall {
-    margin-right: 1.5vw !important;
-  }
-}
-
-/* Colors */
-.description.panel {
-  box-shadow: none !important;
-  background-color: #dedede;
-}
-
-.panel.target {
-  background-color: white;
-}
-
-.panel.NJIT {
-  background-color: #dedede;
-}
-.scroll-down {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.2em;
-  color: inherit;
-}
-
-.arrow {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg);
-  margin-left: 10px;
-}
 #cursor {
   position: fixed;
   width: 17vw;
@@ -2102,6 +2036,7 @@ body {
 
 #footerrow .footercnt:hover {
   border-top: none;
+  /*  background-color: yellow;*/
 }
 #footerrow span {
   position: relative;

@@ -87,13 +87,13 @@ function homeAnimation() {
   tl.to("#nav a", {
     y: 0,
     opacity: 1,
-    stagger: 0.01,
+    stagger: 0.05,
     ease: Expo.easeInOut,
   });
 
   tl.to("#home .parent .child", {
     y: 0,
-    stagger: 0.05,
+    stagger: 0.1,
     duration: 1.2,
     ease: Expo.easeInOut,
   });
@@ -107,77 +107,10 @@ function homeAnimation() {
 }
 
 function locoInitialize() {
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
-  let isUpdating = false;
-
-  // Initialize Locomotive Scroll
   const scroll = new LocomotiveScroll({
     el: document.querySelector("#main"),
     smooth: true,
-    smartphone: {
-      smooth: isMobile ? 0.6 : false,
-      direction: "vertical",
-    },
-    tablet: {
-      smooth: 0.8,
-    },
-    multiplier: isMobile ? 0.5 : 0.8,
-    inertia: isMobile ? 0.6 : 0.9,
   });
-
-  // -------------------------------
-  // ScrollTrigger Proxy Configuration
-  // -------------------------------
-  ScrollTrigger.scrollerProxy("#main", {
-    scrollTop(value) {
-      return arguments.length
-        ? scroll.scrollTo(value, { disableLerp: true })
-        : scroll.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-      return {
-        top: 0,
-        left: 0,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    },
-    pinType: "transform",
-  });
-
-  // -------------------------------
-  // ScrollTrigger Configuration
-  // -------------------------------
-  ScrollTrigger.config({
-    limitCallbacks: true,
-    autoRefreshEvents: "visibilitychange,DOMContentLoaded,load",
-  });
-
-  // -------------------------------
-  // ScrollTrigger Refresh Handler
-  // -------------------------------
-  ScrollTrigger.addEventListener("refresh", () => {
-    if (!isUpdating) {
-      scroll.update();
-      gsap.set(".panel", { force3D: true });
-    }
-  });
-
-  // -------------------------------
-  // Window Resize Handler
-  // -------------------------------
-  const debouncedRefresh = debounce(() => {
-    if (!isUpdating) {
-      isUpdating = true;
-      ScrollTrigger.refresh();
-      isUpdating = false;
-    }
-  }, 100);
-
-  window.addEventListener("resize", debouncedRefresh);
-
-  // Initial setup
-  ScrollTrigger.refresh();
 }
 
 function cardHoverEffect() {
@@ -310,79 +243,6 @@ function makeVisibile() {
   });
 }
 
-function initExperienceScroll() {
-  gsap.registerPlugin(ScrollTrigger);
-
-  gsap.to(".panel:not(:last-child)", {
-    yPercent: -100,
-    ease: "none",
-    stagger: 0.7,
-    scrollTrigger: {
-      trigger: "#container",
-      start: "top top",
-      end: "+=300%",
-      scrub: 0.1, // Smoother on mobile
-      pin: true,
-      scroller: "#main",
-      anticipatePin: 1.2, // Mobile rendering fix
-      markers: false, // Disable in production
-    },
-  });
-
-  gsap.set(".panel", {
-    zIndex: (i, target, targets) => targets.length - i,
-  });
-}
-
-function setVH() {
-  const vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
-}
-
-function debounce(func, timeout = 100) {
-  let timer;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => func.apply(this, args), timeout);
-  };
-}
-
-let lastWindowHeight = window.innerHeight;
-
-function lockViewportHeight() {
-  const currentHeight = window.innerHeight;
-  if (Math.abs(lastWindowHeight - currentHeight) > 50) {
-    document.documentElement.style.height = `${lastWindowHeight}px`;
-    window.scrollTo(0, 0);
-  } else {
-    document.documentElement.style.height = "100%";
-    lastWindowHeight = currentHeight;
-  }
-}
-
-function smoothScrollEnd() {
-  let isScrolling;
-  window.addEventListener(
-    "scroll",
-    () => {
-      window.clearTimeout(isScrolling);
-      isScrolling = setTimeout(() => {
-        ScrollTrigger.refresh();
-        window.scrollTo(window.scrollX, window.scrollY); // Snap to position
-      }, 100);
-    },
-    false
-  );
-}
-
-// Update ScrollTrigger on resize
-window.addEventListener(
-  "resize",
-  debounce(() => {
-    ScrollTrigger.refresh();
-  })
-);
-
 window.onload = function () {
   makeVisibile();
 };
@@ -395,16 +255,6 @@ window.onload = function () {
 document.addEventListener("DOMContentLoaded", makeVisibile);
 
 locoInitialize();
-
-window.addEventListener("resize", setVH);
-setVH(); // Initial call
-
-if (window.innerWidth <= 768) {
-  gsap.defaults({
-    duration: 0.8, // Shorter animations
-    overwrite: "auto", // Prevent animation conflicts
-  });
-}
 
 // Initial check
 //updateScrollSpeed();
@@ -419,21 +269,11 @@ window.onload = function () {
   loaderAnimation();
 };
 
-window.addEventListener("resize", () => {
-  requestAnimationFrame(lockViewportHeight);
-  ScrollTrigger.refresh();
-});
-
-smoothScrollEnd();
-
+locoInitialize();
 navRedirect();
-document.addEventListener("DOMContentLoaded", function () {
-  initExperienceScroll();
-  setVH();
-});
+
 // Call the function to rotate images based on scroll position
-ScrollTrigger.config({ ignoreMobileResize: true });
-ScrollTrigger.normalizeScroll(true);
+
 cardHoverEffect();
 onCardClick();
 makeVisibile();
